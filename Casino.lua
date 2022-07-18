@@ -44,17 +44,17 @@ local function PrepBoard()
             Citizen.Wait(0)
         end
         print(scaleform)
-        local model = GetHashKey("ch_prop_whiteboard"); -- 2054093856
+        local model = GetHashKey("ch_prop_whiteboard");
         local pos = { x = -810.59, y = 170.46, z = 77.25 };
         local entity = GetClosestObjectOfType(pos.x, pos.y, pos.z, 0.05, model, 0, 0, 0)
         local handle = CreateNamedRenderTargetForModel("arcadeplan_01", model)
         while true do
-            SetTextRenderId(handle) -- set render target
+            SetTextRenderId(handle) -- Sets the render target to the handle we grab above
             Set_2dLayer(4)
             SetScriptGfxDrawBehindPausemenu(1)
             DrawScaleformMovie(scaleform, 0.25, 0.5, 0.5, 1.0, 255, 255, 255, 255, 0)
             SetScaleformFitRendertarget(scaleform, true)
-            SetTextRenderId(GetDefaultScriptRendertargetRenderId()) -- reset
+            SetTextRenderId(GetDefaultScriptRendertargetRenderId()) -- Resets the render target
             SetScriptGfxDrawBehindPausemenu(0)
             Citizen.Wait(0)
         end
@@ -116,10 +116,9 @@ RegisterCommand('board', function()
         CallScaleformMethod(scaleform, 'SET_BUTTON_IMAGE', 14, 4) -- Access Point 4
         CallScaleformMethod(scaleform, 'SET_BUTTON_IMAGE', 15, 5) -- Access Point 5
         CallScaleformMethod(scaleform, 'SET_BUTTON_IMAGE', 16, 6) -- Access Point 6
-        -- Selections / Lock / idk imma shoot myself (use button ID's above)
+        -- Selections / Lock / etc (use button ID's above)
         -- CallScaleformMethod(scaleform, 'SET_CURRENT_SELECTION', 5)
         CallScaleformMethod(scaleform, 'SET_EXTREME', 5, true)
-        -- CallScaleformMethod(scaleform, 'SET_PADLOCK', 6, true)
         CallScaleformMethod(scaleform, 'SET_TICK', 2, true)
         CallScaleformMethod(scaleform, 'SET_TICK', 10, true)
     end)
@@ -197,17 +196,17 @@ local function PrepBoard2()
             Citizen.Wait(0)
         end
         print(scaleform2)
-        local model = GetHashKey("ch_prop_whiteboard_02"); -- 2054093856
+        local model = GetHashKey("ch_prop_whiteboard_02");
         local pos = { x = -810.59, y = 170.46, z = 77.25 };
         local entity = GetClosestObjectOfType(pos.x, pos.y, pos.z, 0.05, model, 0, 0, 0)
         local handle = CreateNamedRenderTargetForModel("arcadeplan_02", model)
         while true do
-            SetTextRenderId(handle) -- set render target
+            SetTextRenderId(handle) -- Sets the render target to the handle we grab above
             Set_2dLayer(4)
             SetScriptGfxDrawBehindPausemenu(1)
             DrawScaleformMovie(scaleform2, 0.25, 0.5, 0.5, 1.0, 255, 255, 255, 255, 0)
             SetScaleformFitRendertarget(scaleform2, true)
-            SetTextRenderId(GetDefaultScriptRendertargetRenderId()) -- reset
+            SetTextRenderId(GetDefaultScriptRendertargetRenderId()) -- Resets the render target
             SetScriptGfxDrawBehindPausemenu(0)
             Citizen.Wait(0)
         end
@@ -339,17 +338,17 @@ local function PrepBoard3()
             Wait(0)
         end
         print(scaleform3)
-        local model = GetHashKey("ch_prop_whiteboard_03"); -- 2054093856
+        local model = GetHashKey("ch_prop_whiteboard_03");
         local pos = { x = -810.59, y = 170.46, z = 77.25 };
         local entity = GetClosestObjectOfType(pos.x, pos.y, pos.z, 0.05, model, 0, 0, 0)
         local handle = CreateNamedRenderTargetForModel("arcadeplan_03", model)
         while true do
-            SetTextRenderId(handle) -- set render target
+            SetTextRenderId(handle) -- Sets the render target to the handle we grab above
             Set_2dLayer(4)
             SetScriptGfxDrawBehindPausemenu(1)
             DrawScaleformMovie(scaleform3, 0.25, 0.5, 0.5, 1.0, 255, 255, 255, 255, 0)
             SetScaleformFitRendertarget(scaleform3, true)
-            SetTextRenderId(GetDefaultScriptRendertargetRenderId()) -- reset
+            SetTextRenderId(GetDefaultScriptRendertargetRenderId()) -- Resets the render target
             SetScriptGfxDrawBehindPausemenu(0)
             Wait(0)
         end
